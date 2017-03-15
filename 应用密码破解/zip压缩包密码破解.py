@@ -1,7 +1,8 @@
 #-*-coding:utf-8-*-
-import time
 import sys
-
+import threading
+import time
+import zipfile
 
 
 '''
@@ -12,55 +13,53 @@ z.extractall(pwd)
 
 '''
 
-import zipfile
 
-import threading
 
- 
 
-def zipbp(file,zfile, pwd, start):
+def zipbp(file, zfile, pwd, start):
 
-        try:
+    try:
 
-                zfile.extractall(pwd=pwd)
+        zfile.extractall(pwd=pwd)
 
-                print '密码为 : %s' % pwd
-		fd=open('解密后.txt','a')
-		fd.write("\n"+file+"文件的密码是：\t"+pwd)
-		fd.flush()
-		fd.close()
-		end = time.clock()
+        print '密码为 : %s' % pwd
+        fd = open('解密后.txt', 'a')
+        fd.write("\n" + file + "文件的密码是：\t" + pwd)
+        fd.flush()
+        fd.close()
+        end = time.clock()
 
-		print "破解用时 : %f s" % (end - start)
+        print "破解用时 : %f s" % (end - start)
 
-		print "密码破解记录已经保存到此文件夹“解密后.txt”"
+        print "密码破解记录已经保存到此文件夹“解密后.txt”"
 
-        except:
+    except:
 
-                return
+        return
+
 
 def main():
 
-	file = raw_input("请输入要破解的文件路径如：C:\\file.zip：")
+    file = raw_input("请输入要破解的文件路径如：C:\\file.zip：")
 
-	dic = raw_input("请输入密码字典的文件路径：")
-	
-	print '正在破解...'
+    dic = raw_input("请输入密码字典的文件路径：")
 
-        zfile = zipfile.ZipFile(file)
+    print '正在破解...'
 
-        pwdall = open(dic)
-	start = time.clock()
-        for pwda in pwdall.readlines():
+    zfile = zipfile.ZipFile(file)
 
-                pwd = pwda.strip('\n')
+    pwdall = open(dic)
+    start = time.clock()
+    for pwda in pwdall.readlines():
 
-                t = threading.Thread(target=zipbp, args=(file,zfile, pwd,start))
+        pwd = pwda.strip('\n')
 
-                t.start()
+        t = threading.Thread(target=zipbp, args=(file, zfile, pwd, start))
 
-                t.join()
+        t.start()
+
+        t.join()
 
 if __name__ == '__main__':
 
-        main()
+    main()
