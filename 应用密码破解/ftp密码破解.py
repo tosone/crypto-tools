@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #-*-coding:utf-8-*-
 import ftplib
 import sys
@@ -6,17 +7,10 @@ import time
 from ftplib import FTP
 
 
-# -*- coding: utf-8 -*-
-
-
 '''
-
 z = zipfile.ZipFile('') , extractall
-
 z.extractall(pwd)
-
 '''
-
 
 
 def ftp(user, pwd, host, start):

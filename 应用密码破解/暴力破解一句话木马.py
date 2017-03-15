@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
 # coding by v5est0r
 # 单次多变量提交变量方式,一句话爆破提速千倍
 

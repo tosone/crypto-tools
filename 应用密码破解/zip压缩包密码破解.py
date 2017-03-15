@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #-*-coding:utf-8-*-
 import sys
 import threading
@@ -6,14 +7,9 @@ import zipfile
 
 
 '''
-
 z = zipfile.ZipFile('') , extractall
-
 z.extractall(pwd)
-
 '''
-
-
 
 
 def zipbp(file, zfile, pwd, start):

@@ -1,5 +1,9 @@
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
+import re
+
+
 def unicode():
-    import re
     print('1.unicode转字符\n2.字符转unicode\n3.退出\n')
     select = int(raw_input("请选择："))
     z = ""
