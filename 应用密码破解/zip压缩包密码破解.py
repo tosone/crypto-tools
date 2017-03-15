@@ -24,16 +24,16 @@ def zipbp(file,zfile, pwd, start):
 
                 zfile.extractall(pwd=pwd)
 
-                print 'ÃÜÂëÎª : %s' % pwd
-		fd=open('½âÃÜºó.txt','a')
-		fd.write("\n"+file+"ÎÄ¼şµÄÃÜÂëÊÇ£º\t"+pwd)
+                print 'å¯†ç ä¸º : %s' % pwd
+		fd=open('è§£å¯†å.txt','a')
+		fd.write("\n"+file+"æ–‡ä»¶çš„å¯†ç æ˜¯ï¼š\t"+pwd)
 		fd.flush()
 		fd.close()
 		end = time.clock()
 
-		print "ÆÆ½âÓÃÊ± : %f s" % (end - start)
+		print "ç ´è§£ç”¨æ—¶ : %f s" % (end - start)
 
-		print "ÃÜÂëÆÆ½â¼ÇÂ¼ÒÑ¾­±£´æµ½´ËÎÄ¼ş¼Ğ¡°½âÃÜºó.txt¡±"
+		print "å¯†ç ç ´è§£è®°å½•å·²ç»ä¿å­˜åˆ°æ­¤æ–‡ä»¶å¤¹â€œè§£å¯†å.txtâ€"
 
         except:
 
@@ -41,11 +41,11 @@ def zipbp(file,zfile, pwd, start):
 
 def main():
 
-	file = raw_input("ÇëÊäÈëÒªÆÆ½âµÄÎÄ¼şÂ·¾¶Èç£ºC:\\file.zip£º")
+	file = raw_input("è¯·è¾“å…¥è¦ç ´è§£çš„æ–‡ä»¶è·¯å¾„å¦‚ï¼šC:\\file.zipï¼š")
 
-	dic = raw_input("ÇëÊäÈëÃÜÂë×ÖµäµÄÎÄ¼şÂ·¾¶£º")
+	dic = raw_input("è¯·è¾“å…¥å¯†ç å­—å…¸çš„æ–‡ä»¶è·¯å¾„ï¼š")
 	
-	print 'ÕıÔÚÆÆ½â...'
+	print 'æ­£åœ¨ç ´è§£...'
 
         zfile = zipfile.ZipFile(file)
 

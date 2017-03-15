@@ -57,13 +57,13 @@ def decryption(C, d, n):
     return fastExpMod(C, d, n)
 
 
-p = int( raw_input('ÇëÊäÈëp£º'))
-q = int( raw_input('ÇëÊäÈëq£º'))
+p = int( raw_input('è¯·è¾“å…¥pï¼š'))
+q = int( raw_input('è¯·è¾“å…¥qï¼š'))
 n = p * q
 fn = (p - 1) * (q - 1)
-e = int(raw_input('ÇëÊäÈëe£º'))
+e = int(raw_input('è¯·è¾“å…¥eï¼š'))
 d = computeD(fn, e)
-C = int(raw_input('ÊäÈë16½øÖÆÃÜÎÄ£º'), 16)
+C = int(raw_input('è¾“å…¥16è¿›åˆ¶å¯†æ–‡ï¼š'), 16)
 M = decryption(C, d, n)
 flag = str(hex(M))[2:-1]
 print 'd=',d

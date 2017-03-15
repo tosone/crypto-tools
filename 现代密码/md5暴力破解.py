@@ -1,21 +1,21 @@
 #-*-coding:utf-8-*-
 
 
-####md5½âÃÜ
+####md5è§£å¯†
 ###################################################################################################
 def md5():
-	print('1.¼ÓÃÜ\n2.½âÃÜ\n3.ÍË³ö\n')
-	select=int(raw_input('ÇëÑ¡Ôñ£º'))
+	print('1.åŠ å¯†\n2.è§£å¯†\n3.é€€å‡º\n')
+	select=int(raw_input('è¯·é€‰æ‹©ï¼š'))
 	if select==1:
 		import hashlib
-		str=raw_input('ÊäÈëÒª¼ÓÃÜµÄ×Ö·û´®£º')
+		str=raw_input('è¾“å…¥è¦åŠ å¯†çš„å­—ç¬¦ä¸²ï¼š')
 		md5=hashlib.md5()
 		md5.update(str)
 		print md5.hexdigest(),str
-		raw_input("ÇëÊäÈëÈÎÒâ¼ü¼ÌĞø")
+		raw_input("è¯·è¾“å…¥ä»»æ„é”®ç»§ç»­")
 	elif select==2:
-		str1=raw_input('ÊäÈëÒª½âÃÜµÄ×Ö·û´®£º')
-		str2=raw_input('ÊäÈë×ÖµäÎÄ¼şÃû£¬×¢£¬×ÖµäĞèÔÚ±¾³ÌĞòµÄÍ¬Ò»Ä¿Â¼£º')
+		str1=raw_input('è¾“å…¥è¦è§£å¯†çš„å­—ç¬¦ä¸²ï¼š')
+		str2=raw_input('è¾“å…¥å­—å…¸æ–‡ä»¶åï¼Œæ³¨ï¼Œå­—å…¸éœ€åœ¨æœ¬ç¨‹åºçš„åŒä¸€ç›®å½•ï¼š')
 		import hashlib
 		import time
 		start = time.clock()
@@ -34,7 +34,7 @@ def md5():
 
 					end = time.clock()
 					print "read: %f s" % (end - start)
-					raw_input("ÇëÊäÈëÈÎÒâ¼ü¼ÌĞø")
+					raw_input("è¯·è¾“å…¥ä»»æ„é”®ç»§ç»­")
 					import os
 					os.system('cls')
 					return

@@ -1,13 +1,13 @@
 #-*-coding:utf-8-*-
 
-####¿­ÈöÃÜÂë
+####å‡¯æ’’å¯†ç 
 ###################################################################################################
 def Caesar():
 
-	print('1.´ø×Ö·û\n2.²»´ø×Ö·û\n3.ÍË³ö\n')
-	select=int(raw_input('ÇëÑ¡Ôñ£º'))
+	print('1.å¸¦å­—ç¬¦\n2.ä¸å¸¦å­—ç¬¦\n3.é€€å‡º\n')
+	select=int(raw_input('è¯·é€‰æ‹©ï¼š'))
 	if select==1:
-		lstr=raw_input("ÊäÈëÃÜÎÄ£º")  
+		lstr=raw_input("è¾“å…¥å¯†æ–‡ï¼š")  
 		for p in range(127):  
 			str1 = ''  
 			for i in lstr:  
@@ -33,10 +33,10 @@ def Caesar():
 			b[k]=b[k] -97
 			k=k+1
 		string=""
-		print "1.ÊäÈëÒÆÎ»¸öÊı\n2.ÒÆÎ»26´Î\n3.ÍË³ö"
+		print "1.è¾“å…¥ç§»ä½ä¸ªæ•°\n2.ç§»ä½26æ¬¡\n3.é€€å‡º"
 		sss = int(raw_input("select:"))
 		if sss == 1:
-			nnn = int(raw_input("ÊäÈëÒÆÎ»¸öÊı:"))
+			nnn = int(raw_input("è¾“å…¥ç§»ä½ä¸ªæ•°:"))
 			for i in b:
 				i = (i+nnn)%26+97
 				string=string+chr(i)
@@ -50,6 +50,6 @@ def Caesar():
         				c=chr(i)
         				string=string+c
     				print string
-	raw_input("ÇëÊäÈëÈÎÒâ¼ü¼ÌĞø")
+	raw_input("è¯·è¾“å…¥ä»»æ„é”®ç»§ç»­")
 ###################################################################################################
 Caesar()

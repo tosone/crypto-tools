@@ -26,15 +26,15 @@ def ftp(user,pwd,host,start):
                	ftp.login(user, pwd)
                 ftp.retrlines('LIST')
                 ftp.quit()
-                print '\n[+] ÆÆ½â³É¹¦£¬ÓÃ»§Ãû£º' + user + ' ÃÜÂë£º' + pwd+' ip: '+host
+                print '\n[+] ç ´è§£æˆåŠŸï¼Œç”¨æˆ·åï¼š' + user + ' å¯†ç ï¼š' + pwd+' ip: '+host
 
-		fd=open('½âÃÜ¼ÇÂ¼.txt','a')
-		fd.write("\nftp://"+host+"\tÓÃ»§Ãû£º"+user+"\tÃÜÂë£º"+pwd)
+		fd=open('è§£å¯†è®°å½•.txt','a')
+		fd.write("\nftp://"+host+"\tç”¨æˆ·åï¼š"+user+"\tå¯†ç ï¼š"+pwd)
 		fd.flush()
 		fd.close()
 		end = time.clock()
-		print "ÆÆ½âÓÃÊ± : %f s" % (end - start)
-		print "ÃÜÂëÆÆ½â¼ÇÂ¼ÒÑ¾­±£´æµ½´ËÎÄ¼ş¼Ğ¡°½âÃÜ¼ÇÂ¼.txt¡±"
+		print "ç ´è§£ç”¨æ—¶ : %f s" % (end - start)
+		print "å¯†ç ç ´è§£è®°å½•å·²ç»ä¿å­˜åˆ°æ­¤æ–‡ä»¶å¤¹â€œè§£å¯†è®°å½•.txtâ€"
        		return True,'ftp password is '+user+':'+pwd		
 
         except ftplib.all_errors:
@@ -43,12 +43,12 @@ def ftp(user,pwd,host,start):
 
 def main():
 
-	host = raw_input("ÇëÊäÈëftpÖ÷»úip£º")
-	user = raw_input("ÇëÊäÈëÓÃ»§Ãû×ÖµäÂ·¾¶£¬Èç£ºC:\\file.zip£º")
-	pass1 = raw_input("ÇëÊäÈëÃÜÂë×ÖµäÂ·¾¶£¬Èç£ºC:\\file.zip£º")
+	host = raw_input("è¯·è¾“å…¥ftpä¸»æœºipï¼š")
+	user = raw_input("è¯·è¾“å…¥ç”¨æˆ·åå­—å…¸è·¯å¾„ï¼Œå¦‚ï¼šC:\\file.zipï¼š")
+	pass1 = raw_input("è¯·è¾“å…¥å¯†ç å­—å…¸è·¯å¾„ï¼Œå¦‚ï¼šC:\\file.zipï¼š")
 
 	
-	print 'ÕıÔÚÆÆ½â...'
+	print 'æ­£åœ¨ç ´è§£...'
 
         pwdall = open(pass1)
         userll = open(user)

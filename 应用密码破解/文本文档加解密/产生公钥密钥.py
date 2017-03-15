@@ -6,12 +6,12 @@ from Crypto.Signature import PKCS1_v1_5 as Signature_pkcs1_v1_5
 from Crypto.PublicKey import RSA
 import base64
 
-# Î±Ëæ»úÊıÉú³ÉÆ÷
+# ä¼ªéšæœºæ•°ç”Ÿæˆå™¨
 random_generator = Random.new().read
-# rsaËã·¨Éú³ÉÊµÀı
+# rsaç®—æ³•ç”Ÿæˆå®ä¾‹
 rsa = RSA.generate(1024, random_generator)
  
-# masterµÄÃØÔ¿¶ÔµÄÉú³É
+# masterçš„ç§˜é’¥å¯¹çš„ç”Ÿæˆ
 #private_pem = rsa.exportKey()
  
 #with open('master-private.pem', 'w') as f:
@@ -21,7 +21,7 @@ rsa = RSA.generate(1024, random_generator)
 #with open('master-public.pem', 'w') as f:
 #f   f.write(public_pem)
  
-# ghostµÄÃØÔ¿¶ÔµÄÉú³É
+# ghostçš„ç§˜é’¥å¯¹çš„ç”Ÿæˆ
 private_pem = rsa.exportKey()
 with open('ghost-private.pem', 'w') as f:
   f.write(private_pem)

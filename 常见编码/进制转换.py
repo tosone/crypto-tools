@@ -2,14 +2,14 @@
 import re
 def ascii():
 
-	input1=raw_input('ÇëÄúÊäÈëÒª×ª»»µÄ×Ö·û£º')
+	input1=raw_input('è¯·æ‚¨è¾“å…¥è¦è½¬æ¢çš„å­—ç¬¦ï¼š')
 	bi=""
 	oc=""
 	int1=""
 	he=""
 	b = re.split(r'[\s\,\;]+',input1)
-	print('ÊäÈëµÄ×Ö·û´®½øÖÆÎª:\n1.¶ş½øÖÆ\n2.°Ë½øÖÆ\n3.Ê®½øÖÆ\n4.Ê®Áù½øÖÆ')
-	xxx=int(raw_input("ÇëÑ¡Ôñ£º"))
+	print('è¾“å…¥çš„å­—ç¬¦ä¸²è¿›åˆ¶ä¸º:\n1.äºŒè¿›åˆ¶\n2.å…«è¿›åˆ¶\n3.åè¿›åˆ¶\n4.åå…­è¿›åˆ¶')
+	xxx=int(raw_input("è¯·é€‰æ‹©ï¼š"))
 	for o in b:
 		if xxx==1:
 			i=int(o,2)
@@ -47,13 +47,13 @@ def ascii():
 			oc=oc+" "+oo
 			int1=int1+" "+str(i)
 			he=he+" "+o
-	print "¶ş½øÖÆÎª£º"+bi
-	print "°Ë½øÖÆÎª£º"+oc
-	print "Ê®½øÖÆÎª£º"+int1
-	print "Ê®Áù½øÖÆÎª£º"+he
-	raw_input("ÊäÈëÈÎÒâ¼üÍË³ö")
+	print "äºŒè¿›åˆ¶ä¸ºï¼š"+bi
+	print "å…«è¿›åˆ¶ä¸ºï¼š"+oc
+	print "åè¿›åˆ¶ä¸ºï¼š"+int1
+	print "åå…­è¿›åˆ¶ä¸ºï¼š"+he
+	raw_input("è¾“å…¥ä»»æ„é”®é€€å‡º")
 
 try:	
 	ascii()
 except :
-	print "Ñ¡ÔñµÄ½øÖÆ²»Æ¥Åä"
+	print "é€‰æ‹©çš„è¿›åˆ¶ä¸åŒ¹é…"

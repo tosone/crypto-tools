@@ -1,11 +1,11 @@
 def unicode():
 	import re
-	print('1.unicode×ª×Ö·û\n2.×Ö·û×ªunicode\n3.ÍË³ö\n')
-	select=int(raw_input("ÇëÑ¡Ôñ£º"))
+	print('1.unicodeè½¬å­—ç¬¦\n2.å­—ç¬¦è½¬unicode\n3.é€€å‡º\n')
+	select=int(raw_input("è¯·é€‰æ‹©ï¼š"))
 	z=""
 	if select==1:
-		input1=raw_input('ÇëÄúÊäÈëunicodeÂë£º')
-		print "×Ö·û´®Îª£º" ,
+		input1=raw_input('è¯·æ‚¨è¾“å…¥unicodeç ï¼š')
+		print "å­—ç¬¦ä¸²ä¸ºï¼š" ,
 		b = re.split(r'[\s\,\;]+',input1)
 		for i in b:
 			i=int(i)
@@ -13,8 +13,8 @@ def unicode():
 			z=z+i
 		print z
 	elif select==2:
-		a = raw_input("ÇëÄúÊäÈë×Ö·û´®£º")
-		print "unicodeÎª£º",
+		a = raw_input("è¯·æ‚¨è¾“å…¥å­—ç¬¦ä¸²ï¼š")
+		print "unicodeä¸ºï¼š",
 		for i in a:
 			print i 
 		print z

@@ -2,7 +2,7 @@
 # -*- coding: gbk -*-
 # -*- coding: utf_ -*-
 
-e = raw_input('请输入要解密的字符串\n')
+e = raw_input('璇疯緭鍏ヨ瑙ｅ瘑鐨勫瓧绗︿覆\n')
 elen = len(e)
 field=[]
 for i in range(2,elen):
@@ -18,4 +18,4 @@ for f in field:
 	d = ''
 	for i in range(b):
 		d = d + result[i]
-	print '分为\t'+str(f)+'\t'+'栏时，解密结果为：  '+d
+	print '鍒嗕负\t'+str(f)+'\t'+'鏍忔椂锛岃В瀵嗙粨鏋滀负锛�  '+d

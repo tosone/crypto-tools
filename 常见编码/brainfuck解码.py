@@ -78,7 +78,7 @@ def run(fp):
     mainloop(program, bm)  
 
 
-gg = raw_input('please input brainfuck×¢Òâ»»ĞĞÓÃ"\\n"´úÌæ:\n ')
+gg = raw_input('please input brainfuckæ³¨æ„æ¢è¡Œç”¨"\\n"ä»£æ›¿:\n ')
 fp = open('xiaoyi123.txt','a')
 fp.write(gg)
 fp.close()

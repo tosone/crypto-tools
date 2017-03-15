@@ -4,17 +4,17 @@
 ####base32
 ###################################################################################################
 def base32():
-	print('1.¼ÓÃÜ\n2.½âÃÜ\n3.ÍË³ö\n')
-	select=int(raw_input('ÇëÑ¡Ôñ£º'))
+	print('1.åŠ å¯†\n2.è§£å¯†\n3.é€€å‡º\n')
+	select=int(raw_input('è¯·é€‰æ‹©ï¼š'))
 	if select==1:
 		import base64
-		str=raw_input('ÊäÈëÒª¼ÓÃÜµÄbase×Ö·û´®£º')
+		str=raw_input('è¾“å…¥è¦åŠ å¯†çš„baseå­—ç¬¦ä¸²ï¼š')
 		print 'base64encod:',base64.b64encode(str)
 		print 'base32encod:',base64.b32encode(str)
 		print 'base16encod:',base64.b16encode(str)
-		raw_input("ÇëÊäÈëÈÎÒâ¼ü¼ÌĞø")
+		raw_input("è¯·è¾“å…¥ä»»æ„é”®ç»§ç»­")
 	elif select==2:
-		strf=raw_input('ÊäÈëÒªÆÆ½âµÄbase×Ö·û´®£º')
+		strf=raw_input('è¾“å…¥è¦ç ´è§£çš„baseå­—ç¬¦ä¸²ï¼š')
 		import base64 
 
 		try:
@@ -32,7 +32,7 @@ def base32():
 			print 'base16decod:',base64.b16decode(strf).decode('utf-8')
 		except :
 			pass
-		raw_input("ÇëÊäÈëÈÎÒâ¼ü¼ÌĞø")
+		raw_input("è¯·è¾“å…¥ä»»æ„é”®ç»§ç»­")
 	else:
 		import os
 		os.system('cls')
